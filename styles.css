@@ -1,0 +1,132 @@
+/* Variable Declarations */
+:root {
+    --primary-color: #120323; /* header background color & name of animal */
+    --secondary-color: #97bf04; /* sidebar background colour */
+    --tertiary-color: #d9043d; /* footer background colour & image frame */
+}
+
+/* Header Styling */
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--primary-color);
+}
+.header-container h1 {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    margin: 0;
+}
+/* Body Styling and Image Styling */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Styling of main content and containers */
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+main {
+    flex: 3;
+    padding: 1rem;
+    align-items: center;
+}
+main figcaption {
+    background-color: var(--tertiary-color);
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem;
+}
+main figcaption p {
+    font-size: 1.0rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-align: center;
+}
+main figure img {
+    max-width: 50%;
+    height: 50%;
+    display: block;
+    align-self: center;
+    border: 5px solid var(--tertiary-color);
+}
+
+/* Figure styling */
+figure {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+
+}
+
+figure h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Sidebar Styling */
+aside {
+    flex: 1;
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    margin: 1rem;
+    margin-right: -1.5rem;
+    border-radius: 10px;
+    height: auto;
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--tertiary-color);
+    padding: 1rem;
+    text-align: center;
+    color: white;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1000px) {
+    #container {
+        flex-direction: column;
+    }
+    main {
+        flex: 1;
+    }
+    main figure img {
+        max-width: 300px;
+        height: auto;
+    }
+    aside {
+        flex: 1;
+        width: 95vw; /* 95% of the viewport width */
+        padding-left: 2rem; /* 2rem padding on the left & right to ensure text isn't right up against edge of viewport */
+        padding-right: 2rem;
+        margin: 1rem; /* 1rem margin on all sides */
+    }
+}
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    figure {
+        display: flex;
+        flex-direction: column;
+    }
+    main figure img {
+        max-width: 100%;
+        height: auto;
+    }
+}
